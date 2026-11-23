@@ -6,7 +6,7 @@ def boolean_filter(data: dict, column: str, threshold: float) -> dict:
     """
     df = pd.DataFrame(data)
     
-    con_data = df.loc[df[column]>threshold]
+    con_data = df[df[column]>threshold]
 
     count = con_data.shape[0]
 
